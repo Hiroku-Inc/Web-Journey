@@ -1,0 +1,56 @@
+[hidden] {
+    display: none;
+  }
+  
+  * {
+    scrollbar-color: initial;
+    scrollbar-width: initial;
+    scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
+  }
+    *::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+    border-radius: var(--scrollbar-track-radius);
+  }
+    *::-webkit-scrollbar-track:hover {
+    background-color: var(--scrollbar-track-hover, var(--scrollbar-track));
+  }
+    *::-webkit-scrollbar-track:active {
+    background-color: var(--scrollbar-track-active, var(--scrollbar-track-hover, var(--scrollbar-track)));
+  }
+    *::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: var(--scrollbar-thumb-radius);
+  }
+    *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover, var(--scrollbar-thumb));
+  }
+    *::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-thumb-active, var(--scrollbar-thumb-hover, var(--scrollbar-thumb)));
+  }
+    *::-webkit-scrollbar-corner {
+    background-color: var(--scrollbar-corner);
+    border-radius: var(--scrollbar-corner-radius);
+  }
+    *::-webkit-scrollbar-corner:hover {
+    background-color: var(--scrollbar-corner-hover, var(--scrollbar-corner));
+  }
+    *::-webkit-scrollbar-corner:active {
+    background-color: var(--scrollbar-corner-active, var(--scrollbar-corner-hover, var(--scrollbar-corner)));
+  }
+    * {
+    scrollbar-width: thin;
+  }
+    *::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    height: 8px;
+  }
+    * {
+    --scrollbar-track: #18181b;
+    --scrollbar-thumb: #1f2937;
+    --scrollbar-track-radius: 0.25rem;
+    --scrollbar-thumb-radius: 0.25rem;
+  }
+  .w-hiro {
+    width: 40rem;
+  }

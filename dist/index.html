@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="/dist/output.css" rel="stylesheet">
+      <link href="/dist/other.css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Bulgaria - Explore & Adventure</title>
+      <style>
+         body {
+         font-family: 'Poppins', serif;
+         }
+         /* Custom styles for navbar animation */
+         .nav-container {
+         transition: transform 0.3s ease-in-out;
+         transform: translateY(-100%);
+         position: absolute;
+         top: 0;
+         right: 0;
+         background-color: rgba(0, 0, 0, 0.85);
+         width: 100%;
+         z-index: 10;
+         }
+         .nav-container.open {
+         transform: translateY(0);
+         }
+      </style>
+   </head>
+   <body class="bg-transparent text-white">
+      
+      <div class="w-full mx-auto text-center">
+        <img alt="surrounding landscape" class="flex justify-center items-center pt-12 absolute object-center h-auto w-auto" src="https://media.discordapp.net/attachments/1180539305693810698/1200298024849641564/image.png?ex=65c5aba5&is=65b336a5&hm=219655640a096d8527f0620b791aea5b3fa7ac3c4aa944d8d766cffe047e58ae&=&format=webp&quality=lossless&width=500&height=300" />
+         <img alt="A scenic view of the majestic peaks of the Balkan Mountains with a clear blue sky, fluffy clouds, and a serene lake reflecting the surrounding landscape" class="object-cover h-full w-full" src="https://media.discordapp.net/attachments/1180539305693810698/1198403466066931843/image.png?ex=65bec733&is=65ac5233&hm=0fb99a1736dc47acb7d67870be8c81aec86c4ba59ea0f90f835e8228a1737b40&=&format=webp&quality=lossless&width=1246&height=701" />
+      </div>
+      <!-- Top Logo and Nav -->
+      <!-- Right Side Image -->
+      <nav
+         class="z-10 fixed top-0 flex-no-wrap flex w-full items-center justify-between bg-transparent py-2 shadow-mdlg:flex-wrap lg:justify-start lg:py-4">
+         <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <!-- Hamburger button for mobile view -->
+            <button
+               class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+               type="button" data-te-collapse-init data-te-target="#navbarSupportedContent1"
+               aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+               <!-- Hamburger icon -->
+               <span class="[&>svg]:w-7">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                     <path fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                        clip-rule="evenodd" />
+                  </svg>
+               </span>
+            </button>
+            <!-- Collapsible navigation container -->
+            <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+               id="navbarSupportedContent1" data-te-collapse-item>
+               <!-- Logo -->
+               <a class="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+                  href="#">
+                  <div class="pl-8 pt-8 w-1/2 font-bold uppercase">
+                     <img alt="A scenic view of the majestic peaks of the Balkan Mountains with a clear blue sky, fluffy clouds, and a serene lake reflecting the surrounding landscape" class="object-cover h-full w-full" src="https://media.discordapp.net/attachments/1180539305693810698/1198404568812376064/image.png?ex=65bec83a&is=65ac533a&hm=885d95b294a0848a8e5d3ffe4fe8d4587763eaa8dc08f88fe6e0f6befc6a99f8&=&format=webp&quality=lossless" />
+                  </div>
+               </a>
+
+            </div>
+            <!-- Right elements -->
+            <div class="relative flex items-center">
+
+               <a class="mr-4 text-neutral-600 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  href="#">
+                  <div class="object-right-top ml-auto float-right" onclick="toggleNav()">
+                     <i class="fas fa-bars"></i>
+                  </div>
+               </a>
+
+             
+            </div>
+         </div>
+      </nav>
+      <div class="flex h-screen bg-[#121212]">
+         <!-- Left Side Content -->
+         <div class="flex flex-col justify-between  w-1/2 space-y-8 mt-40">
+            <!-- Top Logo and Nav -->
+     
+            <!-- Main Content -->
+            <div class="pl-16 align-text-top">
+                <h1 class="pr-96 absolute align-text-bottom text-8xl font-bold bg-gradient-to-b from-[#3C3C3C] to-[#121212] text-transparent bg-clip-text ">
+                    Bulgaria
+                </h1>
+               <h1 class="pl-12 text-6xl relative font-bold leading-none mb-6">
+               <br>Explore & <br> Adventure
+             </h1>
+             
+               <p class="pl-12 text-lg w-hiro ">
+                  Bulgaria, nestled in Southeastern Europe, is a country of diverse beauty and rich heritage. From the majestic peaks of the Balkan Mountains to the pristine beaches along the Black Sea coast, Bulgaria offers a stunning blend of landscapes. Charming cities like Sofia and Plovdiv showcase a mix of ancient history and modern vibrancy, while the Rila Monastery and Pirin National Park highlight the country's cultural and natural treasures. Traditional villages in the Rhodope Mountains add a touch of folklore to the experience. Whether exploring historical sites or enjoying outdoor adventures, Bulgaria's captivating charm leaves a lasting impression on visitors.
+               </p>
+          
+            </div>
+
+     
+            <!-- Bottom Scroll Indicator -->
+        <div class="text-2xl pl-12 pb-12">
+               <i class="fas fa-chevron-down"></i>
+            </div>
+       
+         </div>
+         <!-- Right Side Image -->
+         <div class="ml-60 mt-40 w-1/5 h-1/2 rounded-sm">
+            <img alt="A scenic view of the majestic peaks of the Balkan Mountains with a clear blue sky, fluffy clouds, and a serene lake reflecting the surrounding landscape" class="object-cover h-full w-full rounded-lg" src="https://media.discordapp.net/attachments/1180539305693810698/1200293260271300608/image.png?ex=65c5a735&is=65b33235&hm=655c5e3945e9bf7c0d9f3153ed796c1c7747c5d267f0afb442a2727d2272c023&=&format=webp&quality=lossless&width=502&height=655" />
+         </div>
+      </div>
+      <!-- Navigation Menu -->
+      <div class="fixed nav-container top-0 bg-[#121212]" id="navbar">
+         <div class="flex flex-col items-start justify-start space-y-6 py-8 pl-12">
+            <div class="text-2xl cursor-pointer object-right" onclick="toggleNav()">
+               <i class="fas fa-times"></i>
+            </div>
+            <a href="#" class="text-md font-semibold hover:text-gray-300">Home</a>
+            <a href="#" class="text-md font-semibold hover:text-gray-300">Landmark</a>
+            <a href="#" class="text-md font-semibold hover:text-gray-300">About Us</a>
+         </div>
+      </div>
+      <script>
+         // Toggle navigation
+         function toggleNav() {
+             var navbar = document.getElementById('navbar');
+             navbar.classList.toggle('open');
+         }
+      </script>
+   </body>
+</html>
